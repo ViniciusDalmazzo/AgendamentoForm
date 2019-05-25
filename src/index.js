@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="col-md-6">
-        <h3>Agendamento</h3>
+        <h2>Agendamento</h2>
         <FormContainer />
       </div>
     );

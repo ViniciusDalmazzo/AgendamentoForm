@@ -29,7 +29,6 @@ class FormContainer extends Component {
     this.handleGrupo = this.handleGrupo.bind(this);
     this.handleObservacao = this.handleObservacao.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    this.handleClearForm = this.handleClearForm.bind(this);
   }
 
   componentDidMount() {
@@ -135,19 +134,6 @@ class FormContainer extends Component {
     });
   }
 
-  handleClearForm(e) {
-    e.preventDefault();
-    this.setState({
-      agendamento: {
-        dataFim: "",
-        dataInicio: "",
-        quadra: "",
-        grupo: "",
-        observacao: ""
-      }
-    });
-  }
-
   render() {
     return (
       <form className="container-fluid" onSubmit={this.handleFormSubmit}>
@@ -197,14 +183,7 @@ class FormContainer extends Component {
           title={"Cadastrar"}
           style={buttonStyle}
         />{" "}
-        {/*Submit */}
-        <Button
-          action={this.handleClearForm}
-          type={"secondary"}
-          title={"Limpar registros"}
-          style={buttonStyle}
-        />{" "}
-        {/* Clear the form */}
+        {/*Submit */}        
       </form>
     );
   }

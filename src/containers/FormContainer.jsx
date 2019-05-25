@@ -15,8 +15,8 @@ class FormContainer extends Component {
         dataInicio: "",
         dataFim: "",
         observacao: "",
-        quadraSelecionada: "",
-        grupoSelecionado: "",
+        quadra: "",
+        grupo: "",
       },
      
       grupos: [],
@@ -86,7 +86,7 @@ class FormContainer extends Component {
       prevState => ({
         agendamento: {
           ...prevState.agendamento,
-          quadraSelecionada: value
+          quadra: value
         }
       })
     );
@@ -98,7 +98,7 @@ class FormContainer extends Component {
       prevState => ({
         agendamento: {
           ...prevState.agendamento,
-          grupoSelecionado: value
+          grupo: value
         }
       })
     );
@@ -141,8 +141,8 @@ class FormContainer extends Component {
       agendamento: {
         dataFim: "",
         dataInicio: "",
-        quadraSelecionada: "",
-        grupoSelecionado: "",
+        quadra: "",
+        grupo: "",
         observacao: ""
       }
     });
@@ -155,7 +155,7 @@ class FormContainer extends Component {
           title={"Quadra"}
           name={"quadra"}
           options={this.state.quadras}
-          value={this.state.quadraSelecionada}
+          value={this.state.quadra}
           placeholder={"Selecione uma quadra"}
           handleChange={this.handleQuadra}
         />{" "}
@@ -163,7 +163,7 @@ class FormContainer extends Component {
           title={"Grupo"}
           name={"grupo"}
           options={this.state.grupos}
-          value={this.state.grupoSelecionado}
+          value={this.state.grupo}
           placeholder={"Selecione um grupo"}
           handleChange={this.handleGrupo}
         />{" "}
